@@ -2,10 +2,13 @@ version: '3'
 
 services:
   # ganachecli: simulated test rpc on dev environment
+  # --account='0x740fc8d4ca7043fc17f8f5f98a113fcb157378936b688064b8fe80d4cf3e6d6e,10000000'
   ganache-cli:
     container_name: ganache-cli
     image: trufflesuite/ganache-cli:latest
-    command: bash 'ganache-cli --quiet --account="0x61c7829af4befb2374891211ce972b5fc0bd204ec34f0e03192b109af36ede44,10" --account="0x740fc8d4ca7043fc17f8f5f98a113fcb157378936b688064b8fe80d4cf3e6d6e,10"'
+    command: ["--quiet", "--db=chaindb"]
+    volumes:
+      - ./chaindb:/app/chaindb
     ports:
       - 8545:8545
 
