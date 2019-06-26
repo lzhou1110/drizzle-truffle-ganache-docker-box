@@ -5,10 +5,8 @@ services:
   # --account='0x740fc8d4ca7043fc17f8f5f98a113fcb157378936b688064b8fe80d4cf3e6d6e,10000000'
   ganache-cli:
     container_name: ganache-cli
-    image: trufflesuite/ganache-cli:latest
-    command: ["--quiet", "--db=chaindb"]
-    volumes:
-      - ./chaindb:/app/chaindb
+    build:
+      context: ./ganache
     ports:
       - 8545:8545
 
