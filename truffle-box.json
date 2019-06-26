@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    "README.md",
+    ".gitignore"
+  ],
+  "commands": {
+    ""
+    "Build docker-compose": "docker-compose -f docker-compose-dev.yml build",
+    "Run docker-compose": "docker-compose -f docker-compose-dev.yml up",
+  }
+}

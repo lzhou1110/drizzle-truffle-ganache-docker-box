@@ -2,7 +2,6 @@ version: '3'
 
 services:
   # ganachecli: simulated test rpc on dev environment
-  # --account='0x740fc8d4ca7043fc17f8f5f98a113fcb157378936b688064b8fe80d4cf3e6d6e,10000000'
   ganache-cli:
     container_name: ganache-cli
     build:
@@ -12,8 +11,8 @@ services:
 
   # truffle-suite
   # volumes are used here to enable hot editing :) Nice trick!
-  truffle-suite:
-    container_name: truffle-suite
+  truffle-drizzle:
+    container_name: truffle-drizzle
     build:
       context: truffledrizzle
     healthcheck:
