@@ -15,7 +15,7 @@ services:
   truffle-suite:
     container_name: truffle-suite
     build:
-      context: ./source
+      context: truffledrizzle
     healthcheck:
       test: curl -sf -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' localhost:8545
       interval: 5s
@@ -32,4 +32,4 @@ services:
       - 3000:3000
     tty: true
     volumes:
-      - ./source/client/src:/client/src
+      - ./truffledrizzle/client/src:/client/src
