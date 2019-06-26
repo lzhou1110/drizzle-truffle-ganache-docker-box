@@ -1,4 +1,3 @@
 .idea/
 node_modules/
-chaindb/
 truffledrizzle/client/src/contracts/
